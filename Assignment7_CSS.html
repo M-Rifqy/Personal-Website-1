@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rifqy's Portfolio</title>
+    <script src="https://kit.fontawesome.com/1ab2d259fd.js" crossorigin="anonymous"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Pushster&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Play&family=Pushster&display=swap');
+
+      * {
+        user-select: none;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #000000;
+      }
+
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: rgb(230, 230, 230);
+        background: linear-gradient(0deg,rgba(230, 230, 230, 1) 0%,rgba(127, 123, 123, 1) 36%,rgba(0, 0, 0, 1) 69%);
+        border-radius: 10px;
+      }
+
+      .home-area {
+        background-color: #000000;
+        height: 100vh;
+        width: 100%;
+      }
+
+      .side-nav {
+        height: 575px;
+        width: 60px;
+        background-color: #000000;
+        position: fixed;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 20px;
+        top: 15px;
+        left: 20px;
+        transition: 0.5s ;
+        /*border: solid rgba(0, 255, 163, 1) 1px;*/
+      }
+
+      .side-nav:hover {
+        /* box-shadow: 5px 2px 36px 5px rgba(97,255,135,0.41); */
+        box-shadow: 5px 2px 36px 5px rgba(230, 230, 230, 0.41);
+        border: solid #e6e6e6 1px;
+      }
+
+      .side-nav a {
+        text-decoration: none;
+        font-size: 20px;
+        /* color: rgba(0, 255, 163, 1); */
+        color: #e6e6e6;
+        transition: 1s;
+        position: relative;
+        left: 19px;
+      }
+
+      .mr {
+        position: absolute;
+        top: 100px;
+        left: 750px;
+        height: 350px;
+        width: 350px;
+        border-radius: 60% 40% 56% 44% / 35% 37% 63% 65%;
+        background-color: #e6e6e6;
+        transition: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        animation: neonAnim 2s alternate-reverse infinite;
+      }
+
+      @keyframes neonAnim {
+        from {
+          box-shadow: 0 0 10px rgba(230, 230, 230, 0.7),
+            0 0 40px rgba(230, 230, 230, 0.7),
+            0 0 100px rgba(230, 230, 230, 0.7);
+        }
+        to {
+          box-shadow: 0 0 5px rgba(230, 230, 230, 0.7),
+            0 0 20px rgba(230, 230, 230, 0.7), 0 0 60px rgba(230, 230, 230, 0.7);
+        }
+      }
+
+      .name {
+        color: #e6e6e6;
+        font-family: 'Pushster', cursive;
+        font-size: 40px;
+        position: relative;
+        top: 150px;
+        left: 200px;
+      }
+
+      .name p {
+        animation: nem 2s alternate-reverse infinite;
+        position: absolute;
+        top: -20px;
+        font-family: 'Play', sans-serif;
+        font-size: 70px;
+      }
+
+      @keyframes nem {
+        from {
+          text-shadow: 0 0 10px rgba(230, 230, 230, 0.7),
+            0 0 40px rgba(230, 230, 230, 0.7),
+            0 0 100px rgba(230, 230, 230, 0.7);
+        }
+        to {
+          text-shadow: 0 0 5px rgba(230, 230, 230, 0.7),
+            0 0 20px rgba(230, 230, 230, 0.7), 0 0 60px rgba(230, 230, 230, 0.7);
+        }
+      }
+
+      .nice {
+        color: #e6e6e6;
+        position: absolute;
+        top: 290px;
+        left: 480px;
+        font-size: 20px;
+        font-family: 'Pushster', cursive;
+      }
+
+      .sub-name {
+        color: #e6e6e6;
+        font-family: 'Pushster', cursive;
+        font-size: 20px;
+        position: absolute;
+        top: 450px;
+        left: 150px;
+      }
+
+      .mouse,
+      .mouse:before {
+        position: absolute;
+        left: 50%;
+      }
+
+      .mouse {
+        width: 20px;
+        height: 60px;
+        margin-left: -20px;
+        margin-top: -35px;
+        box-shadow: inset 0 0 0 1px#fff;
+        border-radius: 25px;
+        top: 35px;
+        left: 75px;
+      }
+
+      .mouse:before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background: #fff;
+        margin-left: -4px;
+        top: 8px;
+        border-radius: 4px;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-name: scroll;
+      }
+
+      @keyframes scroll {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(46px);
+        }
+      }
+
+      .about-area {
+        background-color: #000000;
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        /* background-color:darkmagenta; */
+      }
+
+      .bio {
+        font-family: 'Play', sans-serif;
+        font-size: 50px;
+        color: #e6e6e6;
+        position: relative;
+        top: 40px;
+        left: 135px;
+        animation: nim 2s alternate-reverse infinite;
+      }
+
+      @keyframes nim {
+        from {
+          text-shadow: 0 0 10px rgba(230, 230, 230, 0.7),
+            0 0 40px rgba(230, 230, 230, 0.7),
+            0 0 100px rgba(230, 230, 230, 0.7);
+        }
+        to {
+          text-shadow: 0 0 5px rgba(230, 230, 230, 0.7),
+            0 0 20px rgba(230, 230, 230, 0.7), 0 0 60px rgba(230, 230, 230, 0.7);
+        }
+      }
+
+      .data img {
+        background-color: #000000;
+        height: 200px;
+        width: 200px;
+        border: solid #e6e6e6 2px;
+        border-radius: 10px;
+        position: absolute;
+        top: 130px;
+        left: 170px;
+      }
+
+      .sub-data1 {
+        height: 50px;
+        width: 50px;
+        border: solid #e6e6e6 2px;  
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 130px;
+        left: 430px;
+      }
+
+      .abt1 {
+        font-size: 20px;
+        color: #e6e6e6;
+      }
+
+      .data1-text {
+        color: #e6e6e6;
+        font-family: 'Play', sans-serif;
+        font-size: 18px;
+        position: absolute;
+        top: 135px;
+        left: 490px;
+      }
+
+      .sub-data2 {
+        height: 50px;
+        width: 50px;
+        border: solid #e6e6e6 2px;  
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 210px;
+        left: 430px;
+      }
+
+      .abt2 {
+        font-size: 20px;
+        color: #e6e6e6;
+      }
+
+      .data2-text {
+        color: #e6e6e6;
+        font-family: 'Play', sans-serif;
+        font-size: 18px;
+        position: absolute;
+        top: 215px;
+        left: 490px;
+      }
+
+      .sub-data3 {
+        height: 50px;
+        width: 50px;
+        border: solid #e6e6e6 2px;  
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 290px;
+        left: 430px;
+      }
+
+      .abt3 {
+        font-size: 20px;
+        color: #e6e6e6;
+      }
+
+      .data3-text {
+        color: #e6e6e6;
+        font-family: 'Play', sans-serif;
+        font-size: 18px;
+        position: absolute;
+        top: 295px;
+        left: 490px;
+      }
+
+      .sub-data4 {
+        height: 50px;
+        width: 50px;
+        border: solid #e6e6e6 2px;  
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 370px;
+        left: 430px;
+      }
+
+      .abt4 {
+        font-size: 20px;
+        color: #e6e6e6;
+      }
+
+      .data4-text {
+        color: #e6e6e6;
+        font-family: 'Play', sans-serif;
+        font-size: 18px;
+        position: absolute;
+        top: 375px;
+        left: 490px;
+      }
+
+      .sub-data5 {
+        height: 50px;
+        width: 50px;
+        border: solid #e6e6e6 2px;  
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 450px;
+        left: 430px;
+      }
+
+      .abt5 {
+        font-size: 20px;
+        color: #e6e6e6;
+      }
+
+      .data5-text {
+        color: #e6e6e6;
+        font-family: 'Play', sans-serif;
+        font-size: 18px;
+        position: absolute;
+        top: 455px;
+        left: 490px;
+      }
+
+      .sub-data6 {
+        height: 50px;
+        width: 50px;
+        border: solid #e6e6e6 2px;  
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 130px;
+        left: 800px;
+      }
+
+      .abt6 {
+        font-size: 20px;
+        color: #e6e6e6;
+      }
+
+      .data6-text {
+        color: #e6e6e6;
+        font-family: 'Play', sans-serif;
+        font-size: 18px;
+        position: absolute;
+        top: 135px;
+        left: 860px;
+      }
+
+      .sub-data7 {
+        height: 50px;
+        width: 50px;
+        border: solid #e6e6e6 2px;  
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 345px;
+        left: 170px;
+      }
+
+      .abt7 {
+        font-size: 20px;
+        color: #e6e6e6;
+        transition: transform .7s ease-in-out; 
+      }
+
+      .abt7:hover {
+        transform: rotate(360deg);
+      }
+
+      .data7-text {
+        color: #e6e6e6;
+        font-family: 'Play', sans-serif;
+        font-size: 18px;
+        position: absolute;
+        top: 350px;
+        left: 230px;
+      }
+
+      .data7-text a {
+        font-family: 'Play', sans-serif;
+        color: #e6e6e6;
+      }
+
+      .skill-area {
+        background-color: #000000;
+        height: 100vh;
+        width: 100%;
+        position: relative;
+      }
+
+      .skill-title {
+        font-family: 'Play', sans-serif;
+        font-size: 50px;
+        color: #e6e6e6;
+        position: relative;
+        top: 50px;
+        left: 130px;
+        animation: anims 2s alternate-reverse infinite;
+      }
+
+      @keyframes anims {
+        from {
+          text-shadow: 0 0 10px rgba(230, 230, 230, 0.7),
+            0 0 40px rgba(230, 230, 230, 0.7),
+            0 0 100px rgba(230, 230, 230, 0.7);
+        }
+        to {
+          text-shadow: 0 0 5px rgba(230, 230, 230, 0.7),
+            0 0 20px rgba(230, 230, 230, 0.7), 0 0 60px rgba(230, 230, 230, 0.7);
+        }
+      }
+
+      .wrapper {
+        width: 800px;
+        position: absolute;
+        left: 140px;
+        top: 100px;
+      }
+
+      .container {
+        width: 100%;
+        padding: 30px 30px 50px;
+        background-color: #000000;
+        border-radius: 10px;
+        box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+        backdrop-filter: blur(10px);
+      } 
+
+      .container * {
+        font-family: 'Play', sans-serif;
+        color: #e6e6e6;
+        font-weight: 500;
+      }
+
+      .skills:not(:last-child) {
+        margin-bottom: 25px;
+      }
+
+      .details {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+
+      .bar {
+        position: relative;
+        border: 2px solid #e6e6e6;
+        border-radius: 20px;
+      }
+
+      .bar div {
+        position: relative;
+        width: 0;
+        height: 9px;
+        border-radius: 10px;
+        background-color: #e6e6e6;
+      }
+
+      #algo-bar{
+        animation: algo-fill 2s forwards;
+      }
+
+      @keyframes algo-fill {
+        100% {
+          width: 40%;
+        }
+      }
+
+      #html-bar{
+        animation: html-fill 2s forwards;
+      }
+
+      @keyframes html-fill {
+        100% {
+          width: 90%;
+        }
+      }
+
+      #css-bar {
+        animation: css-fill 2s forwards;
+      }
+
+      @keyframes css-fill {
+        100% {
+          width: 75%;
+        }
+      }
+
+      #js-bar {
+        animation: js-fill 2s forwards;
+      }
+      
+      @keyframes js-fill {
+        100% {
+          width: 50%;
+        }
+      }
+
+      #creativity-bar {
+        animation: creativity-fill 2s forwards;
+      }
+
+      @keyframes creativity-fill {
+        100% {
+          width: 80%;
+        }
+      } 
+
+      #english-bar {
+        animation: english-fill 2s forwards;
+      }
+
+      @keyframes english-fill {
+        100% {
+          width: 88%;
+        }
+      } 
+
+      #arabic-bar {
+        animation: arabic-fill 2s forwards;
+      }
+
+      @keyframes arabic-fill {
+        100% {
+          width: 84%;
+        }
+      }
+
+      .project-area {
+        background-color: #000000;
+        height: 100vh;
+        width: 100%;
+        position: relative;
+      }
+
+      .project-title {
+        font-family: 'Play', sans-serif;
+        font-size: 50px;
+        color: #e6e6e6;
+        position: relative;
+        top: 40px;
+        left: 170px;
+        animation: anima 2s alternate-reverse infinite;
+      }
+
+      @keyframes anima {
+        from {
+          text-shadow: 0 0 10px rgba(230, 230, 230, 0.7),
+            0 0 40px rgba(230, 230, 230, 0.7),
+            0 0 100px rgba(230, 230, 230, 0.7);
+        }
+        to {
+          text-shadow: 0 0 5px rgba(230, 230, 230, 0.7),
+            0 0 20px rgba(230, 230, 230, 0.7), 0 0 60px rgba(230, 230, 230, 0.7);
+        }
+      }
+
+      .prev {
+        position: absolute;
+        top: 270px;
+        left: 130px;
+        color: #e6e6e6;
+        height: 50px;
+        width: 50px;
+        font-size: 40px;
+      }
+
+      .next {
+        position: absolute;
+        top: 270px;
+        left: 1100px;
+        color: #e6e6e6;
+        height: 50px;
+        width: 50px;
+        font-size: 40px;
+      }
+
+      .project1 {
+        position: absolute;
+        top: 190px;
+        left: 200px;
+        background-color: #000000;
+        color: #e6e6e6;
+        font-size: 70px;
+        border: solid #e6e6e6 2px;
+        border-radius: 10px;
+        height: 200px;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .project1:hover {
+        box-shadow: 5px 5px 50px -9px #e6e6e6;
+      }
+
+      .project-text {
+        font-family: 'Pushster', cursive;
+        font-size: 40px;
+        color: #e6e6e6;
+        position: absolute;
+        top: 160px;
+        left: 550px;
+      }
+
+      .project-subtext {
+        font-family: 'Play', sans-serif;
+        font-size: 20px;
+        color: #e6e6e6;
+        position: absolute;
+        top: 220px;
+        left: 550px;
+      }
+
+      .preview {
+        position: absolute;
+        top: 370px;
+        left: 600px;
+        height: 40px;
+        width: 110px;
+        background-color: #000000;
+        color: #e6e6e6;
+        font-family: 'Play', sans-serif;
+        font-size: 20px;
+        border: solid #e6e6e6 2px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .preview:hover{
+        background-color: #e6e6e6;
+        color: #000000;
+        box-shadow: 1px -1px 50px  1px #e6e6e6;
+      }
+
+      .contact-area {
+        background-color: #000000;
+        height: 100vh;
+        width: 100%;
+        position: relative;
+      }
+
+      .contact {
+        font-family: 'Play', sans-serif;
+        font-size: 50px;
+        color: #e6e6e6;
+        position: relative;
+        top: 40px;
+        left: 135px;
+        animation: anim 2s alternate-reverse infinite;
+      }
+
+      @keyframes anim {
+        from {
+          text-shadow: 0 0 10px rgba(230, 230, 230, 0.7),
+            0 0 40px rgba(230, 230, 230, 0.7),
+            0 0 100px rgba(230, 230, 230, 0.7);
+        }
+        to {
+          text-shadow: 0 0 5px rgba(230, 230, 230, 0.7),
+            0 0 20px rgba(230, 230, 230, 0.7), 0 0 60px rgba(230, 230, 230, 0.7);
+        }
+      }
+
+    .user {
+      font-family: 'Play', sans-serif;
+      font-size: 15px;
+      background-color: #000000;
+      color: #e6e6e6;
+      position: absolute;
+      top: 120px;
+      left: 120px;
+      height: 40px;
+      width: 270px;
+      cursor: pointer;
+      padding-left: 10px;
+      padding-right: 10px;
+      border: solid #e6e6e6 2px;
+      border-radius: 5px;
+    }
+
+    .user:focus {
+      outline: none;
+      box-shadow: 5px 5px 50px -9px #e6e6e6;
+    }
+
+    ::placeholder {
+      color: #e6e6e6;
+      font-family: 'Play', sans-serif;
+    }
+
+    .email {
+      font-family: 'Play', sans-serif;
+      font-size: 15px;
+      background-color: #000000;
+      color: #e6e6e6;
+      position: absolute;
+      top: 120px;
+      left: 425px;
+      height: 40px;
+      width: 270px;
+      cursor: pointer;
+      padding-left: 10px;
+      padding-right: 10px;
+      border: solid #e6e6e6 2px;
+      border-radius: 5px;
+    }
+
+    .email:focus {
+      outline: none;
+      box-shadow: 5px 5px 50px -9px #e6e6e6;
+    }
+
+    .subject {
+      font-family: 'Play', sans-serif;
+      font-size: 15px;
+      background-color: #000000;
+      color: #e6e6e6;
+      position: absolute;
+      top: 180px;
+      left: 120px;
+      height: 40px;
+      width: 575px;
+      cursor: pointer;
+      padding-left: 10px;
+      padding-right: 10px;
+      border: solid #e6e6e6 2px;
+      border-radius: 5px;
+    }
+
+    .subject:focus {
+      outline: none;
+      box-shadow: 5px 5px 50px -9px #e6e6e6;
+    }
+
+    .write {
+      font-family: 'Play', sans-serif;
+      font-size: 15px;
+      background-color: #000000;
+      color: #e6e6e6;
+      position: absolute;
+      top: 240px;
+      left: 120px;
+      height: 200px;
+      width: 575px;
+      cursor: pointer;
+      padding: 10px;
+      border: solid #e6e6e6 2px;
+      border-radius: 5px;
+    }
+
+    .write:focus {
+      outline: none;
+      box-shadow: 5px 5px 50px -9px #e6e6e6;
+    }
+
+    .but {
+      font-family: 'Play', sans-serif;
+      font-size: 20px;
+      background-color: #000000;
+      color: #e6e6e6;
+      position: absolute;
+      top: 450px;
+      left: 615px;
+      height: 30px;
+      width: 80px;
+      cursor: pointer;
+      border: solid #e6e6e6 2px;
+      border-radius: 5px;
+
+    }
+
+    .but:hover {
+      background-color: #e6e6e6;
+      color: #000000;
+      font-weight: bolder;
+      box-shadow: 1px -1px 50px  1px #e6e6e6;
+    }
+
+    .map img {
+      position: absolute;
+      left: 500px;
+      border-radius: 10px;
+      opacity: 0.8;
+    }
+
+    
+    .medsos {
+        height: 50px;
+        width: 50px;
+        border: solid #e6e6e6 2px;  
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 480px;
+        left: 120px;
+      }
+
+      .png {
+        font-size: 20px;
+        color: #e6e6e6;
+      }
+
+      .sosmed {
+        color: #e6e6e6;
+        font-family: 'Play', sans-serif;
+        font-size: 18px;
+        position: absolute;
+        top: 480px;
+        left: 180px;
+      }
+
+      .media a {
+        color: #e6e6e6;
+        font-size: 30px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="side-nav">
+      <a href="#home"><i class="fas fa-home"></i></a>
+      <a href="#about" style="padding-top: 25px"><i class="fas fa-user"></i></a>
+      <a href="#skill" style="padding-top: 25px"><i class="fas fa-medal"></i></a>
+      <a href="#project" style="padding-top: 25px"><i class="fas fa-tools"></i></a>
+      <a href="#message" style="padding-top: 25px"><i class="fas fa-phone"></i></a>
+    </div>
+
+    <section id="home" class="home-area">
+      <div class="name">
+        Hi, There
+        <p>I'AM_RIFQY</p>
+      </div>
+      <div class="nice">I'ts nice to meet you</div>
+      <div class="sub-name">Scroll &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="mouse"></div>to learn more about me
+      </div>
+      <img src="MRI.png" class="mr"/>
+    </section>
+
+    <section id="about" class="about-area">
+      <div class="bio">ABOUT_ME</div>
+      <div class="data">
+        <img src="MRYs.png">
+      </div>
+        <div>
+          <div class="sub-data1"><i class="fas fa-user abt1"></i></div>
+          <div class="data1-text">Name<br>Muhammad Rifqy</div>
+        </div>
+        <div>
+          <div class="sub-data2"><i class="fas fa-calendar-alt abt2"></i></div>
+          <div class="data2-text">Birthday<br>24 December 2003</div>
+        </div>
+        <div>
+          <div class="sub-data3"><i class="fas fa-map-marked abt3"></i></div>
+          <div class="data3-text">Address<br>Ciganjur, South Jakarta</div>
+        </div>
+        <div>
+          <div class="sub-data4"><i class="fas fa-flag abt4"></i></div>
+          <div class="data4-text">Nationality<br>Indonesian</div>
+        </div>
+        <div>
+          <div class="sub-data5"><i class="fas fa-envelope abt5"></i></div>
+          <div class="data5-text">Email<br>2ndrifqy@gmail.com</div>
+        </div>
+        <div>
+          <div class="sub-data6"><i class="fas fa-graduation-cap abt6"></i></div>
+          <div class="data6-text">Qualifications<br>- Senior High School Alfa Husna<br>
+            <span style="font-size: 15px;">&nbsp;&nbsp;&nbsp;2019 - 2022</span>
+            <br><br><br>- OTW
+          </div>
+        </div>
+        <div>
+          <div class="sub-data7"><i class="fas fa-download down abt7"></i></div>
+          <div class="data7-text"><a href="#">Download<br>CV</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skill" class="skill-area">
+      <div class="wrapper">
+        <div class="container">
+          <div class="skills">
+            <div class="details">
+              <span>Algorithm</span>
+              <span>40%</span>
+            </div>
+            <div class="bar">
+              <div id="algo-bar"></div>
+            </div>
+          </div>
+          <div class="skills">
+            <div class="details">
+              <span>HTML</span>
+              <span>90%</span>
+            </div>
+            <div class="bar">
+              <div id="html-bar"></div>
+            </div>
+          </div>
+          <div class="skills">
+            <div class="details">
+              <span>CSS</span>
+              <span>75%</span>
+            </div>
+            <div class="bar">
+              <div id="css-bar"></div>
+            </div>
+          </div>
+          <div class="skills">
+            <div class="details">
+              <span>JavaScript</span>
+              <span>50%</span>
+            </div>
+            <div class="bar">
+              <div id="js-bar"></div>
+            </div>
+          </div>
+          <div class="skills">
+            <div class="details">
+              <span>Creativity</span>
+              <span>80%</span>
+            </div>
+            <div class="bar">
+              <div id="creativity-bar"></div>
+            </div>
+          </div>
+          <div class="skills">
+            <div class="details">
+              <span>English</span>
+              <span>88%</span>
+            </div>
+            <div class="bar">
+              <div id="english-bar"></div>
+            </div>
+          </div>
+          <div class="skills">
+            <div class="details">
+              <span>Arabic</span>
+              <span>84%</span>
+            </div>
+            <div class="bar">
+              <div id="arabic-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="skill-title">MY_SKILLS</div>
+    </section>
+
+    <section id="project" class="project-area">
+      <div class="project-title">MY_PROJECTS</div>
+      <div class="prev"><i class="fas fa-chevron-left"></i></div><div class="next"><i class="fas fa-chevron-right"></i></div>
+      <div class="project1"><i class="fas fa-exclamation-circle"></i></div>
+      <div class="project-text">Portfolio</div>
+      <div class="project-subtext">
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Deleniti, quaerat exercitationem animi maxime<br>
+         nam illum expedita ea explicabo pariatur sapiente<br> ipsam culpa ullam minus beatae, optio ab!<br>
+         Quos, voluptatum aspernatur! 
+      </div>
+      <div class="preview">Preview&nbsp;&nbsp;<i class="fas fa-arrow-right" style=" position: relative; top: 2px;"></i></i></div>
+    </section>
+
+    <section id="message" class="contact-area">
+      <div class="map"><img src="Maps.png" height="660px" width="1000px"></div>
+      <div class="contact">CONTACT_ME</div>
+      <input type="text" class ="user"  placeholder="Name">
+      <input type="text" class ="email" placeholder="Email">
+      <input type="text" class="subject" placeholder="Subject">
+      <textarea rows="15" class="write" placeholder="Message"></textarea>
+      <button type="submit" class="but">Send</button>
+      <div>
+        <div class="medsos"><i class="fas fa-share-alt png"></i></div>
+        <div class="sosmed"> My Social medias<br>
+          <div class="media">
+            <a href="https://github.com/M-Rifqy/Flazaw.git" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/muhammad-rifqy-12145a226/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-whatsapp-square"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-skype"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  </body>
+</html>
